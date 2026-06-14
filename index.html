@@ -22,13 +22,15 @@
   <!-- Header / Nav -->
   <header class="navbar">
     <div class="logo">Dev<span>Portfolio</span></div>
-    <nav>
+    <nav id="main-nav">
       <a href="#hero">Accueil</a>
       <a href="#projects">Projets</a>
       <a href="#skills">Compétences</a>
       <a href="#contact">Contact</a>
     </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false">☰</button>
   </header>
+  <div class="nav-overlay" id="nav-overlay"></div>
 
   <!-- Hero -->
   <section id="hero" class="hero section">
@@ -48,7 +50,7 @@
     <h2 class="section-title">Mes <span>Projets</span> CodeAlpha</h2>
     <div class="projects-grid">
       <!-- Project 1 -->
-      <a href="../TASK1/galerie.html" class="project-card">
+      <a href="https://leyassoung.github.io/code-alpha-galerie/" class="project-card" target="_blank" rel="noopener">
         <div class="project-img bg-galerie"></div>
         <div class="project-info">
           <h3>Galerie Photo</h3>
@@ -56,7 +58,7 @@
         </div>
       </a>
       <!-- Project 2 -->
-      <a href="../TASK2/index.html" class="project-card">
+      <a href="https://leyassoung.github.io/code-alpha-calculatrice/" class="project-card" target="_blank" rel="noopener">
         <div class="project-img bg-calc"></div>
         <div class="project-info">
           <h3>Calculatrice</h3>
@@ -64,7 +66,7 @@
         </div>
       </a>
       <!-- Project 4 -->
-      <a href="../TASK4/index.html" class="project-card">
+      <a href="https://leyassoung.github.io/code-alpha-music/" class="project-card" target="_blank" rel="noopener">
         <div class="project-img bg-music"></div>
         <div class="project-info">
           <h3>Lecteur Musique</h3>
@@ -112,5 +114,37 @@
   </footer>
 
   <script src="scripte.js" defer></script>
+  <script>
+    // Menu hamburger mobile
+    const navToggle = document.getElementById('nav-toggle');
+    const mainNav = document.getElementById('main-nav');
+    const navOverlay = document.getElementById('nav-overlay');
+
+    function openNav() {
+      mainNav.classList.add('open');
+      navOverlay.classList.add('open');
+      navToggle.textContent = '✕';
+      navToggle.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeNav() {
+      mainNav.classList.remove('open');
+      navOverlay.classList.remove('open');
+      navToggle.textContent = '☰';
+      navToggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+
+    navToggle.addEventListener('click', () => {
+      mainNav.classList.contains('open') ? closeNav() : openNav();
+    });
+
+    navOverlay.addEventListener('click', closeNav);
+
+    mainNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeNav);
+    });
+  </script>
 </body>
 </html>

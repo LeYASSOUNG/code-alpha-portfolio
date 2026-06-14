@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — CodeAlpha</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Custom Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <!-- Background Blobs -->
+  <div class="blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <!-- Header / Nav -->
+  <header class="navbar">
+    <div class="logo">Dev<span>Portfolio</span></div>
+    <nav>
+      <a href="#hero">Accueil</a>
+      <a href="#projects">Projets</a>
+      <a href="#skills">Compétences</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="hero section">
+    <div class="glass-panel">
+      <span class="badge">Bonjour, je suis Diarra</span>
+      <h1>Développeur <span class="typing-text"></span></h1>
+      <p>Bienvenue sur mon portfolio interactif. Je conçois des interfaces web modernes avec une approche centrée sur l'expérience utilisateur et un design premium.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">Découvrir mes projets</a>
+        <a href="#contact" class="btn-secondary">Me Contacter</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="projects section">
+    <h2 class="section-title">Mes <span>Projets</span> CodeAlpha</h2>
+    <div class="projects-grid">
+      <!-- Project 1 -->
+      <a href="../TASK1/galerie.html" class="project-card">
+        <div class="project-img bg-galerie"></div>
+        <div class="project-info">
+          <h3>Galerie Photo</h3>
+          <p>Lightbox, Diaporama, Filtres, Favoris</p>
+        </div>
+      </a>
+      <!-- Project 2 -->
+      <a href="../TASK2/index.html" class="project-card">
+        <div class="project-img bg-calc"></div>
+        <div class="project-info">
+          <h3>Calculatrice</h3>
+          <p>Mode Scientifique, Historique Local</p>
+        </div>
+      </a>
+      <!-- Project 4 -->
+      <a href="../TASK4/index.html" class="project-card">
+        <div class="project-img bg-music"></div>
+        <div class="project-info">
+          <h3>Lecteur Musique</h3>
+          <p>Visualiseur, Recherche, Sauvegarde d'état</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="skills section">
+    <h2 class="section-title">Mes <span>Compétences</span></h2>
+    <div class="skills-container">
+      <div class="skill-tag">HTML5</div>
+      <div class="skill-tag">CSS3 (Glassmorphism)</div>
+      <div class="skill-tag">JavaScript (ES6+)</div>
+      <div class="skill-tag">UI/UX Design</div>
+      <div class="skill-tag">LocalStorage</div>
+      <div class="skill-tag">Responsive Design</div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact section">
+    <div class="glass-panel contact-panel">
+      <h2 class="section-title">Me <span>Contacter</span></h2>
+      <form id="contact-form">
+        <div class="input-group">
+          <input type="text" id="name" placeholder="Votre nom" required aria-label="Nom"/>
+          <input type="email" id="email" placeholder="Votre email" required aria-label="Email"/>
+        </div>
+        <textarea id="msg" placeholder="Votre message" rows="5" required aria-label="Message"></textarea>
+        <button type="submit" class="btn-primary">Envoyer le message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="social-links">
+      <a href="#" aria-label="GitHub" class="social-icon">GitHub</a>
+      <a href="#" aria-label="LinkedIn" class="social-icon">LinkedIn</a>
+      <a href="#" aria-label="Twitter" class="social-icon">Twitter</a>
+    </div>
+    <p>© 2026 CodeAlpha — Portfolio de Diarra. Tous droits réservés.</p>
+  </footer>
+
+  <script src="scripte.js" defer></script>
+</body>
+</html>
